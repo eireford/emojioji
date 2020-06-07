@@ -10,7 +10,7 @@ To run the application locally you can use the `runFunction` Gradle task:
 $ ./gradlew runFunction
 ```
 
-And then visit http://localhost:8081/pets 
+And then visit http://localhost:8081/emoji
 
 ## Deployment
 
@@ -45,5 +45,5 @@ $ YOUR_HTTP_TRIGGER_URL=$(gcloud alpha functions describe myfunction --format='v
 You can then use this variable to test the function invocation:
 
 ```bash
-$ curl -i $YOUR_HTTP_TRIGGER_URL/hello/John
+$ curl -i $YOUR_HTTP_TRIGGER_URL/emoji/smiley
 ```
