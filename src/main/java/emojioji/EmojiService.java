@@ -6,43 +6,82 @@ import javax.inject.Singleton;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
 import java.util.Optional;
-import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Singleton
 class EmojiService {
-    private final Map<String, Emoji> emojis = new ConcurrentHashMap<>();
+    private ArrayList<Emoji> emojis;
+    private Map<String, Integer> emojisNameToIndex = new ConcurrentHashMap<>();
+    private Map<Integer, String> emojisIndexToName = new ConcurrentHashMap<>();
+
 
     public EmojiService() {
-        emojis.put("grinning", new Emoji("grinning", UUID.randomUUID().toString(), EmojiUtils.htmlify(":grinning:")));
-        emojis.put("smiley", new Emoji("smiley", UUID.randomUUID().toString(), EmojiUtils.htmlify(":smiley:")));
-        emojis.put("smile", new Emoji("smile", UUID.randomUUID().toString(), EmojiUtils.htmlify(":smile:")));
-        emojis.put("grin", new Emoji("grin", UUID.randomUUID().toString(), EmojiUtils.htmlify(":grin:")));
-        emojis.put("child", new Emoji("child", UUID.randomUUID().toString(), EmojiUtils.htmlify(":child:")));
-        emojis.put("laughing", new Emoji("laughing", UUID.randomUUID().toString(), EmojiUtils.htmlify(":laughing:")));
-        emojis.put("wink", new Emoji("wink", UUID.randomUUID().toString(), EmojiUtils.htmlify(":wink:")));
-        emojis.put("person", new Emoji("person", UUID.randomUUID().toString(), EmojiUtils.htmlify(":person:")));
-        emojis.put("older person", new Emoji("older person", UUID.randomUUID().toString(), EmojiUtils.htmlify(":older person:")));
-        emojis.put("heart_eyes", new Emoji("heart_eyes", UUID.randomUUID().toString(), EmojiUtils.htmlify(":heart_eyes:")));
+        emojis = new ArrayList<Emoji>();
+        Emoji grinning = new Emoji("grinning", EmojiUtils.emojify(":grinning:"));
+        emojis.add(grinning);
+        emojisNameToIndex.put("grinning", emojis.size()-1);
+        emojisIndexToName.put(emojis.size()-1,"grinning");
+        Emoji smiley = new Emoji("smiley", EmojiUtils.emojify(":smiley:"));
+        emojis.add(smiley);
+        emojisNameToIndex.put("smiley", emojis.size()-1);
+        emojisIndexToName.put(emojis.size()-1,"smiley");
+        Emoji smile = new Emoji("smile", EmojiUtils.emojify(":smile:"));
+        emojis.add(smile);
+        emojisNameToIndex.put("smile", emojis.size()-1);
+        emojisIndexToName.put(emojis.size()-1,"smile");
+        Emoji grin = new Emoji("grin", EmojiUtils.emojify(":grin:"));
+        emojis.add(grin);
+        emojisNameToIndex.put("grin", emojis.size()-1);
+        emojisIndexToName.put(emojis.size()-1,"grin");
+        Emoji child = new Emoji("child", EmojiUtils.emojify(":child:"));
+        emojis.add(child);
+        emojisNameToIndex.put("child", emojis.size()-1);
+        emojisIndexToName.put(emojis.size()-1,"child");
+        Emoji laughing = new Emoji("laughing", EmojiUtils.emojify(":laughing:"));
+        emojis.add(laughing);
+        emojisNameToIndex.put("laughing", emojis.size()-1);
+        emojisIndexToName.put(emojis.size()-1,"laughing");
+        Emoji wink = new Emoji("wink", EmojiUtils.emojify(":wink:"));
+        emojis.add(wink);
+        emojisNameToIndex.put("wink", emojis.size()-1);
+        emojisIndexToName.put(emojis.size()-1,"wink");
+        Emoji person = new Emoji("adult", EmojiUtils.emojify(":adult:"));
+        emojis.add(person);
+        emojisNameToIndex.put("adult", emojis.size()-1);
+        emojisIndexToName.put(emojis.size()-1,"adult");
+        Emoji olderPerson = new Emoji("older_adult", EmojiUtils.emojify(":older_adult:"));
+        emojis.add(olderPerson);
+        emojisNameToIndex.put("older_adult", emojis.size()-1);
+        emojisIndexToName.put(emojis.size()-1,"older_adult");
+        Emoji heartEyes = new Emoji("heart_eyes", EmojiUtils.emojify(":heart_eyes:"));
+        emojis.add(heartEyes);
+        emojisNameToIndex.put("heart_eyes", emojis.size()-1);
+        emojisIndexToName.put(emojis.size()-1,"heart_eyes");
     }
 
     Collection<Emoji> allEmojis() {
-        return emojis.values();
+        return emojis;
     }
 
     Optional<Emoji> findEmoji(@NotBlank String name) {
-        return Optional.ofNullable(emojis.get(name));
+        return Optional.ofNullable(emojis.get(emojisNameToIndex.get(name)));
     }
 
     Emoji saveEmoji(@NotNull @Valid Emoji emoji) {
-        emojis.put(emoji.getName(), emoji);
+        emojis.add(emoji);
+        emojisNameToIndex.put(emoji.getName(), emojis.size()-1);
+        emojisIndexToName.put(emojis.size()-1, emoji.getName());
         return emoji;
     }
 
     void deleteEmoji(@NotBlank String name) {
-        emojis.remove(name);
+        Integer index = emojisNameToIndex.get(name);
+        emojisNameToIndex.remove(name);
+        emojisIndexToName.remove(index);
+        emojis.remove(index.intValue());
     }
 }

@@ -1,5 +1,6 @@
 package emojioji;
 
+import emoji4j.EmojiUtils;
 import io.micronaut.core.annotation.Introspected;
 
 import javax.validation.constraints.NotBlank;
@@ -15,23 +16,23 @@ public class Emoji {
 
     @NotBlank
     @NotNull
-    private String id;
-
-    @NotBlank
-    @NotNull
     private String emojiCode;
 
-    public Emoji(String name, String id, String emojiCode) {
+    public Emoji(String name, String emojiCode) {
+        if(!EmojiUtils.isEmoji(emojiCode)) throw new RuntimeException("Bad EmojiCode");
         this.name = name;
-        this.id = id;
         this.emojiCode = emojiCode;
+    }
+
+    public Emoji(String name) {
+        if(!EmojiUtils.isEmoji(name)) throw new RuntimeException("Bad EmojiCode");
+        this.name = name;
+        this.emojiCode = EmojiUtils.emojify(name);
     }
 
     public String getName() {
         return name;
     }
-
-    public String getId(){ return id; }
 
     public String getEmojiCode(){ return emojiCode; }
 }

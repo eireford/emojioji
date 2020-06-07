@@ -1,1 +1,6 @@
-GET http://localhost:8081
+GET http://localhost:8081/emoji
+Accept: application/json
+
+###
+GET http://localhost:8081/emoji/smile
+Accept: application/json

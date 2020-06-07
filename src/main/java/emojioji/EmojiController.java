@@ -31,8 +31,8 @@ public class EmojiController {
 
     @Post(processes = APPLICATION_JSON)
     @Status(HttpStatus.CREATED)
-    Emoji saveEmoji(String name, String id, String emojiCode) {
-        return EmojiService.saveEmoji(new Emoji(name, id, emojiCode));
+    Emoji saveEmoji(String name, String emojiCode) {
+        return EmojiService.saveEmoji(new Emoji(name, emojiCode));
     }
 
     @Delete("/{name}")
