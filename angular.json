@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "emojioji"
+    }
+  },
+  "defaultProject": "emojioji",
+  "cli": {
+    "analytics": "6770a9db-6ac6-4c23-8ac5-6a702238d657"
+  }
 }
