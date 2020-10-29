@@ -1,7 +1,7 @@
 version: 2.1
 jobs:
   build:
-    working_directory: ~/my-project
+    working_directory: ~/emojioji
     docker:
       - image: circleci/node:10-browsers
     steps:
