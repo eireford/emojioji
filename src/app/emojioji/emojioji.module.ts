@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { EmojiojiRoutingModule } from './emojioji-routing.module';
 import { EmojiModule } from './emoji/emoji.module';
+import { OjiModule } from './oji/oji.module';
 
 
 @NgModule({
@@ -10,7 +11,8 @@ import { EmojiModule } from './emoji/emoji.module';
   imports: [
     CommonModule,
     EmojiojiRoutingModule,
-    EmojiModule
+    EmojiModule,
+    OjiModule
   ]
 })
 export class EmojiojiModule { }
