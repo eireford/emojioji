@@ -1,13 +1,14 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { EmojiojiRoutingModule } from './emojioji-routing.module';
-import { EmojiModule } from './emoji/emoji.module';
-import { OjiModule } from './oji/oji.module';
+import {EmojiojiRoutingModule} from './emojioji-routing.module';
+import {EmojiModule} from './emoji/emoji.module';
+import {OjiModule} from './oji/oji.module';
+import {EmojiojiComponent} from './emojioji/emojioji.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [EmojiojiComponent],
   imports: [
     CommonModule,
     EmojiojiRoutingModule,
@@ -15,4 +16,5 @@ import { OjiModule } from './oji/oji.module';
     OjiModule
   ]
 })
-export class EmojiojiModule { }
+export class EmojiojiModule {
+}

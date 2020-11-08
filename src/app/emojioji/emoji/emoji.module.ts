@@ -1,15 +1,22 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { EmojiRoutingModule } from './emoji-routing.module';
-import { EmojiListComponent } from './emoji-list/emoji-list.component';
+import {EmojiRoutingModule} from './emoji-routing.module';
+import {EmojiDetailComponent} from './emoji-detail/emoji-detail.component';
+import {EmojiComponent} from './emoji/emoji.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
-  declarations: [EmojiListComponent],
+  declarations: [ EmojiDetailComponent, EmojiComponent],
+  exports: [
+    EmojiComponent
+  ],
   imports: [
     CommonModule,
-    EmojiRoutingModule
+    EmojiRoutingModule,
+    FormsModule
   ]
 })
-export class EmojiModule { }
+export class EmojiModule {
+}

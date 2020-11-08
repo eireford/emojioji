@@ -1,1 +1,74 @@
 /* You can add global styles to this file, and also import other style files */
+/* Navigation link styles */
+h1 {
+  color: teal;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+}
+body {
+  margin: 0;
+  display: flex;
+}
+
+app-root {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  border: 3px solid lightskyblue;
+  display: flex;
+}
+
+app-emojioji {
+  margin: 0px;
+  border: 3px solid red;
+  padding: 0px;
+}
+
+.emojioji {
+  border: 3px solid black;
+  display: flex;
+  margin: 0px;
+  padding: 2px;
+
+}
+
+.emoji {
+  border: 3px solid green;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.oji {
+  border: 2px solid blue;
+  margin: 0;
+}
+/*
+.emojioji {
+
+  min-height: 90%;
+  border: 3px solid black;
+}
+
+.emoji {
+  min-width: 160px;
+  width: 20%;
+  min-height: 400px;
+  height: 100%;
+  margin: 1px;
+  border: 3px solid teal;
+}
+
+.oji {
+  width: 80%;
+  min-height: 400px;
+  height: 100%;
+  margin: 1px;
+  border: 3px solid green;
+}
+*/
+
+ul {
+  list-style-type: none;
+}
+

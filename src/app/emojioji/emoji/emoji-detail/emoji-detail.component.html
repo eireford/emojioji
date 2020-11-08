@@ -1,0 +1,13 @@
+<p>emoji detail</p>
+<div *ngIf="emoji$ | async as emoji;else emojiNotFound">
+
+  {{ emoji.name }}
+  <div>
+    <label>Id: </label>{{ emoji.id }}</div>
+  <div>
+    <label>Name: </label>
+    <input [(ngModel)]="emoji.name" placeholder="name"/>
+  </div>
+
+</div>
+<ng-template #emojiNotFound>Emoji Not Found</ng-template>

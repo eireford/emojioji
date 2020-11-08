@@ -1,0 +1,10 @@
+<div class="emoji">
+  <h1>Emoji</h1>
+  <ul>
+    <li *ngFor="let emoji of emojis$ | async">
+      <a [routerLink]="['/emoji',emoji.id]">
+        {{ emoji.id }}{{ emoji.name }}
+      </a>
+    </li>
+  </ul>
+</div>
