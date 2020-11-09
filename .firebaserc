@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "three": "emojioji"
+  },
+  "targets": {
+    "emojioji": {
+      "hosting": {
+        "emojioji": [
+          "emojioji"
+        ]
+      }
+    }
+  }
+}
