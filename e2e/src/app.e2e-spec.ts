@@ -23,7 +23,7 @@ describe('when the app loads', () => {
 
     it('should display the hello message', async () => {
       await browser.wait(until.visibilityOf(shell.welcomeText), 5000, 'Element taking too long to appear');
-      expect(await shell.getParagraphText()).toEqual('Hello world !');
+      expect(await shell.getParagraphText()).toEqual('Oji');
     });
   });
 });
