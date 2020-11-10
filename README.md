@@ -1,14 +1,16 @@
-# Emojioji
+# Emojioji\*
 
-## About
+**_\*Emojioji is in the prototype stage, stay tuned._**
+
+### About
 
 Emojioji lets people make and share imaginary places called Oji that are populated by Emoji.
 As members of an Oji, some Emoji gain the ability to do things.
 
 - Move
-- Follow instructions
-- Send and receive messages.
+- Send and receive messages
 - Make changes to themselves and other Emoji.
+- Follow instructions and make decisions
 
 ## Technology
 
@@ -42,11 +44,11 @@ Emojioji uses a novel architecture to implement simple web services that are bac
   - send and receive messages
   - change their own properties
 
-### About
+### What can it do?
 
-**_Emojioji is still in the prototype stage, stay tuned._**
+## What you can do with emojioji.
 
-What you can do with emojioji.
+Coming Soon! :)
 
 - ~~multiplayer games~~
   - ~~dungeon crawler~~
@@ -54,7 +56,6 @@ What you can do with emojioji.
   - ~~checkers~~
   - ~~chess~~
   - ~~poker~~
-  - ~~tank battle~~
 - ~~postings~~
   - ~~status~~
   - ~~messages~~
