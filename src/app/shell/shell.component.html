@@ -45,7 +45,12 @@
         <button class="menu-button" mat-icon-button (click)="sidenav.toggle()" fxHide.gt-sm>
           <mat-icon>menu</mat-icon>
         </button>
-        <span>{{ title }}</span>
+        <div *ngIf="title == 'About'; else homeBlock">
+          <mat-icon>info</mat-icon>
+        </div>
+        <ng-template #homeBlock>
+          <mat-icon>house</mat-icon>
+        </ng-template>
       </mat-toolbar>
       <router-outlet></router-outlet>
     </mat-sidenav-content>
