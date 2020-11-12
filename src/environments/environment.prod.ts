@@ -5,12 +5,22 @@
 // Note that as usual, any environment variables you expose through it will end up in your
 // bundle, and you should not use it for any sensitive information like passwords or keys.
 import { env } from './.env';
+import { InterfaceEnvironment } from './interface-environment';
 
-export const environment = {
+export const environment: InterfaceEnvironment = {
   production: true,
   hmr: false,
   version: env.npm_package_version,
   serverUrl: 'https://api.chucknorris.io',
   defaultLanguage: 'en-US',
   supportedLanguages: ['en-US'],
+  firebase: {
+    apiKey: 'AIzaSyA3mOsqUy7RkqInIXvBZk5BFJJhF48-wPQ',
+    authDomain: 'emojioji.firebaseapp.com',
+    databaseURL: 'https://emojioji.firebaseio.com',
+    projectId: 'emojioji',
+    storageBucket: 'emojioji.appspot.com',
+    messagingSenderId: '433460257363',
+    appId: '1:433460257363:web:1857efb0ca52b9e5f69ca6',
+  },
 };
