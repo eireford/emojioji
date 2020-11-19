@@ -11,12 +11,14 @@ import { AngularFireStorageModule, BUCKET } from '@angular/fire/storage';
 
 import { environment } from '@env/environment';
 import { CoreModule } from '@core';
-import { SharedModule } from '@shared';
 import { AuthModule } from '@app/auth';
-import { HomeModule } from './home/home.module';
-import { ShellModule } from './shell/shell.module';
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
+import { HomeModule } from '@app/home/home.module';
+import { ShellModule } from '@app/shell/shell.module';
+import { AppComponent } from '@app/app.component';
+import { AppRoutingModule } from '@app/app-routing.module';
+import { SharedModule } from '@shared';
+import { UploadedComponent } from './uploaded/uploaded.component';
+import { UploadedModule } from './uploaded/uploaded.module';
 
 @NgModule({
   imports: [
@@ -34,6 +36,7 @@ import { AppRoutingModule } from './app-routing.module';
     ShellModule,
     HomeModule,
     AuthModule,
+    UploadedModule,
     AppRoutingModule, // must be imported as the last module as it contains the fallback route
   ],
   declarations: [AppComponent],

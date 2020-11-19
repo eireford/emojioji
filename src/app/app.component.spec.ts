@@ -4,6 +4,7 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { CoreModule } from '@core';
 import { AppComponent } from './app.component';
+import { SharedModule } from '@shared';
 
 describe('AppComponent', () => {
   beforeEach(
