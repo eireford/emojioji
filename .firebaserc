@@ -1,6 +1,7 @@
 {
   "projects": {
-    "three": "emojioji"
+    "three": "emojioji",
+    "default": "emojioji"
   },
   "targets": {
     "emojioji": {
