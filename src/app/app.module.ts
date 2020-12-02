@@ -12,7 +12,6 @@ import { AngularFireStorageModule, BUCKET } from '@angular/fire/storage';
 import { environment } from '@env/environment';
 import { CoreModule } from '@core';
 import { AuthModule } from '@app/auth';
-import { HomeModule } from '@app/home/home.module';
 import { ShellModule } from '@app/shell/shell.module';
 import { AppComponent } from '@app/app.component';
 import { AppRoutingModule } from '@app/app-routing.module';
