@@ -1,6 +1,10 @@
-# Emojioji\*
+# Emojioji
 
-**_\*Emojioji is in the prototype stage, stay tuned._**
+[![CircleCI](https://circleci.com/gh/eireford/emojioji.svg?style=svg)](https://circleci.com/gh/eireford/emojioji)
+
+## Technology
+
+Emojioji is a capstone project that offers simple web services to demonstrate some useful technology.
 
 ### About
 
@@ -11,10 +15,6 @@ As members of an Oji, some Emoji gain the ability to do things.
 - Send and receive messages
 - Make changes to themselves and other Emoji.
 - Follow instructions and make decisions
-
-## Technology
-
-Emojioji is a capstone project that offers simple web services to demonstrate some cool technology.
 
 Built with
 
