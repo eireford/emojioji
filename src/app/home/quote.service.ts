@@ -22,14 +22,14 @@ export class QuoteService {
     return this.httpClient.get(routes.quote(context)).pipe(
       map((body: any) => 'Emojioji'),
       // map((body: any) => body.value),
-      catchError(() => of('Error, could not load joke :-('))
+      catchError(() => of('Not using quote service'))
     );
   }
 
   getRandomQuote(context: RandomQuoteContext): Observable<string> {
     return this.httpClient.get(routes.quote(context)).pipe(
       map((body: any) => body.value),
-      catchError(() => of('Error, could not load joke :-('))
+      catchError(() => of('Not using quote service'))
     );
   }
 }
