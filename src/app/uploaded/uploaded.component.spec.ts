@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UploadedComponent } from './uploaded.component';
 
-describe('UploadedComponent', () => {
+describe.skip('UploadedComponent', () => {
   let component: UploadedComponent;
   let fixture: ComponentFixture<UploadedComponent>;
 
