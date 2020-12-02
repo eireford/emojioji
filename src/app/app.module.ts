@@ -17,7 +17,6 @@ import { ShellModule } from '@app/shell/shell.module';
 import { AppComponent } from '@app/app.component';
 import { AppRoutingModule } from '@app/app-routing.module';
 import { SharedModule } from '@shared';
-import { UploadedComponent } from './uploaded/uploaded.component';
 import { UploadedModule } from './uploaded/uploaded.module';
 
 @NgModule({
@@ -34,7 +33,6 @@ import { UploadedModule } from './uploaded/uploaded.module';
     CoreModule,
     SharedModule,
     ShellModule,
-    HomeModule,
     AuthModule,
     UploadedModule,
     AppRoutingModule, // must be imported as the last module as it contains the fallback route
