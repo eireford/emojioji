@@ -4,7 +4,7 @@ jobs:
     working_directory: ~/emojioji
     docker:
       - image: circleci/node:12-browsers
-    parallelism: 4
+    parallelism: 1
     steps:
       - checkout
       - restore_cache:
