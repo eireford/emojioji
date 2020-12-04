@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "staging": "emojioji"
+  },
+  "targets": {
+    "emojioji": {
+      "hosting": {
+        "emojioji": [
+          "emojioji"
+        ]
+      }
+    }
+  }
+}

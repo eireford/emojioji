@@ -1,0 +1,78 @@
+{
+  "generator-addon-firebase": {
+    "firebaseDeploy": true,
+    "version": "3.0.1",
+    "props": {
+      "firebaseDeploy": true,
+      "appName": "emojioji",
+      "projectName": "emojioji",
+      "packageManager": "npm",
+      "location": "path",
+      "strict": false,
+      "skipInstall": false,
+      "skipQuickstart": false,
+      "initGit": true,
+      "usePrefix": true,
+      "target": [
+        "web"
+      ],
+      "pwa": true,
+      "ui": "material",
+      "layout": "side-menu",
+      "auth": true,
+      "lazy": true,
+      "angulartics": false,
+      "languages": [
+        "en-US"
+      ],
+      "tools": [
+        "jest",
+        "puppeteer"
+      ],
+      "utility": [
+        "lodash",
+        "datefns"
+      ],
+      "deploy": "firebase",
+      "mobile": [],
+      "desktop": []
+    }
+  },
+  "generator-ngx-rocket": {
+    "version": "9.1.0",
+    "props": {
+      "location": "path",
+      "strict": false,
+      "skipInstall": false,
+      "skipQuickstart": false,
+      "initGit": true,
+      "usePrefix": true,
+      "appName": "emojioji",
+      "target": [
+        "web"
+      ],
+      "pwa": true,
+      "ui": "material",
+      "layout": "side-menu",
+      "auth": true,
+      "lazy": true,
+      "angulartics": false,
+      "languages": [
+        "en-US"
+      ],
+      "tools": [
+        "jest",
+        "puppeteer"
+      ],
+      "utility": [
+        "lodash",
+        "datefns"
+      ],
+      "deploy": "firebase",
+      "projectName": "emojioji",
+      "packageManager": "npm",
+      "mobile": [],
+      "desktop": []
+    }
+  }
+}
