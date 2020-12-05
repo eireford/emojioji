@@ -28,6 +28,10 @@
             <span translate>Home</span>
           </a>
           <mat-divider></mat-divider>
+          <a mat-list-item routerLink="/quote" routerLinkActive="active" (click)="isMobile && sidenav.close()">
+            <span translate>Quote</span>
+          </a>
+          <mat-divider></mat-divider>
           <a mat-list-item routerLink="/about" routerLinkActive="active" (click)="isMobile && sidenav.close()">
             <span translate>About</span>
           </a>

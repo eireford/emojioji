@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { QuoteService } from '@app/quote/quote.service';
+import { finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-quote',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuoteComponent implements OnInit {
 
-  constructor() { }
+  quote: string | undefined;
+  isLoading = false;
 
-  ngOnInit(): void {
+  constructor(private quoteService: QuoteService) { }
+
+  ngOnInit() {
+    this.isLoading = true;
+    this.quoteService.getRandomQuote({ category: 'dev' })
+      .pipe(finalize(() => { this.isLoading = false; }))
+      .subscribe((quote: string) => { this.quote = quote; });
   }
 
 }

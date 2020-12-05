@@ -1,6 +1,13 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { QuoteComponent } from './quote.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { QuoteService } from '@app/quote/quote.service';
+import { SharedModule } from '@shared';
+import { MaterialModule } from '@app/material.module';
+import { CoreModule } from '@core';
 
 describe('QuoteComponent', () => {
   let component: QuoteComponent;
@@ -8,7 +15,16 @@ describe('QuoteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ QuoteComponent ]
+      imports: [
+        BrowserAnimationsModule,
+        FlexLayoutModule,
+        MaterialModule,
+        CoreModule,
+        SharedModule,
+        HttpClientTestingModule
+      ],
+      declarations: [QuoteComponent],
+      providers: [QuoteService]
     })
     .compileComponents();
   });
