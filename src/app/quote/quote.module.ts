@@ -5,7 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from '@shared';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MaterialModule } from '@app/material.module';
-import { HomeRoutingModule } from '@app/home/home-routing.module';
+import { QuoteRoutingModule } from '@app/quote/quote-routing.module';
 
 
 
@@ -17,7 +17,7 @@ import { HomeRoutingModule } from '@app/home/home-routing.module';
     SharedModule,
     FlexLayoutModule,
     MaterialModule,
-    HomeRoutingModule
+    QuoteRoutingModule
   ]
 })
 export class QuoteModule { }

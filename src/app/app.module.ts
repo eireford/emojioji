@@ -31,7 +31,6 @@ import { QuoteModule } from './quote/quote.module';
     ShellModule,
     HomeModule,
     AuthModule,
-    QuoteModule,
     AppRoutingModule// must be imported as the last module as it contains the fallback route
   ],
   declarations: [AppComponent],
