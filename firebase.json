@@ -1,6 +1,7 @@
 {
   "hosting": [
     {
+      "target": "emojioji",
       "public": "dist",
       "ignore": [
         "firebase.json",
