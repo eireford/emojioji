@@ -16,7 +16,17 @@ export const environment = {
   version: env.npm_package_version + '-dev',
   serverUrl: '/api',
   defaultLanguage: 'en-US',
-  supportedLanguages: ['en-US']
+  supportedLanguages: ['en-US'],
+  firebase: {
+    apiKey: 'AIzaSyA3mOsqUy7RkqInIXvBZk5BFJJhF48-wPQ',
+    authDomain: 'emojioji.firebaseapp.com',
+    databaseURL: 'https://emojioji.firebaseio.com',
+    projectId: 'emojioji',
+    storageBucket: 'emojioji.appspot.com',
+    messagingSenderId: '433460257363',
+    appId: '1:433460257363:web:1857efb0ca52b9e5f69ca6',
+    measurementId: 'G-5D2KBGGWT8'
+  }
 };
 
 /*

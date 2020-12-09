@@ -36,6 +36,14 @@
             <span translate>About</span>
           </a>
           <mat-divider></mat-divider>
+          <a mat-list-item routerLink="/upload" routerLinkActive="active" (click)="isMobile && sidenav.close()">
+            <span translate>Upload</span>
+          </a>
+          <mat-divider></mat-divider>
+          <a mat-list-item routerLink="/storage" routerLinkActive="active" (click)="isMobile && sidenav.close()">
+            <span translate>Storage</span>
+          </a>
+          <mat-divider></mat-divider>
         </mat-list>
       </nav>
     </mat-sidenav>

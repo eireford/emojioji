@@ -1,0 +1,7 @@
+<div>
+  <ul>
+    <li class="text" *ngFor="let upload of uploadsObservable | async">
+      {{ upload.path }}<img [src]="upload.path | getDownloadURL" />
+    </li>
+  </ul>
+</div>

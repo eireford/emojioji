@@ -1,12 +1,11 @@
 # Emojioji
 
-[![CircleCI](https://circleci.com/gh/eireford/emojioji.svg?style=svg)](https://circleci.com/gh/eireford/emojioji)
+[![CircleCI](https://circleci.com/gh/eireford/emojioji.svg?style=svg)](https://circleci.com/gh/eireford/emojioji) CircleCI Build Status
 
-## Technology
+### What it is.
+Emojioji is development sandbox made with Angular for Firebase.
 
-Emojioji is a capstone project that offers simple web services to demonstrate some useful technology.
-
-### About
+### What it does.
 
 Emojioji lets people make and share imaginary places called Oji that are populated by Emoji.
 As members of an Oji, some Emoji gain the ability to do things.
@@ -14,39 +13,53 @@ As members of an Oji, some Emoji gain the ability to do things.
 - Move
 - Send and receive messages
 - Make changes to themselves and other Emoji.
-- Follow instructions and make decisions
+- Follow instructions and make choices based on experience.
 
-Built with
+#### What its built with.
 
 - TypeScript, Angular
 - Angular Material
 - AngularFire
 - ngX-Rocket generator
 - Webpack, Sass
-- Jest, Karma, Protractor
+- Jest, Karma, Protractor, Puppeteer
 - TSLint, Codelyzer, HTMLHint, StyleLint
 - ngx-translate
 - Firebase
-  - Realtime Database
+  - Realtime Database (RTDB)
   - FireStore
   - Cloud Storage
 - Tensorflow
 
-### Distributed
+#### What makes it distributable.
 
-Emojioji uses a novel architecture to implement simple web services that are backed by highly parallelizable tensorflow operations.
+Emojioji employs uses common strategies implement simple web services that are backed by distributable tensorflow operations.
 
-- Oji: Tensors of dense UUIDs with a user-friendly presentation as grids of Emoji.
-- Emoji: Icons representing messages which can contain
-  - User content including text and images.
-  - Agent declarations.
-- Agents serve as actors that can
-  - send and receive messages
-  - change their own properties
-
-### What can it do?
-
-## What you can do with emojioji.
+- Oji:
+    - synchronized tables in Firebase RTDB
+    - Dense Tensors of UUID Emoji keys
+- Emoji: 
+    - versioned JSON in Firestore
+    - structured sparse data
+        - UUID keys
+        - emoji icons, 
+        - short name
+        - Observables of JSON data
+    - Can Be Agents
+        - send and receive messages
+        - change internal state 
+- Simulation engine that will for each phase,
+    1) executes all emoji agents
+        - agent receives current context
+            - position
+            - locations of close neighbors
+        - agent generates messages
+    2) receives and delivers messages
+    3) processes messages it has received
+        - update emoji locations
+        - add and remove emoji
+        
+## What will it be able to do.
 
 Coming Soon! :)
 

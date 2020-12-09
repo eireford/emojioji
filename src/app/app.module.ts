@@ -15,23 +15,31 @@ import { HomeModule } from './home/home.module';
 import { ShellModule } from './shell/shell.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { QuoteModule } from './quote/quote.module';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
     ServiceWorkerModule.register('./ngsw-worker.js', { enabled: environment.production }),
     FormsModule,
     HttpClientModule,
     TranslateModule.forRoot(),
     BrowserAnimationsModule,
     MaterialModule,
+    MatIconModule,
     CoreModule,
     SharedModule,
     ShellModule,
     HomeModule,
     AuthModule,
-    AppRoutingModule// must be imported as the last module as it contains the fallback route
+    AngularFireStorageModule,
+    AngularFirestoreModule,
+    AppRoutingModule,
+// must be imported as the last module as it contains the fallback route
   ],
   declarations: [AppComponent],
   providers: [

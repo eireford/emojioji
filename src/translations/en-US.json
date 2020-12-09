@@ -4,6 +4,8 @@
   "About Message": "Emojioji is a demo app built from Angular for Firebase",
   "Quote": "Quote",
   "Home": "Home",
+  "Upload": "Upload",
+  "Storage": "Storage",
   "Logged in as": "Logged in as",
   "Login": "Login",
   "Logout": "Logout",
