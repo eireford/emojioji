@@ -59,7 +59,7 @@ Emojioji employs uses common strategies implement simple web services that are b
         - update emoji locations
         - add and remove emoji
         
-## What will it be able to do.
+### What will it be able to do.
 
 Coming Soon! :)
 
