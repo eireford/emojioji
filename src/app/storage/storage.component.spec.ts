@@ -5,7 +5,7 @@ import { AngularFirestoreModuleStub } from '../../../test/AngularFirestoreModule
 import { AngularFireStorageModuleStub } from '../../../test/AngularFireStorageModuleStub';
 import { GetDownloadURLPipeModule } from '@angular/fire/storage';
 
-describe('StorageComponent', () => {
+describe.skip('StorageComponent', () => {
   let component: StorageComponent;
   let fixture: ComponentFixture<StorageComponent>;
 
