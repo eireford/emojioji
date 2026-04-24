@@ -38,7 +38,7 @@
     "rxjs": "^6.6.3",
     "tslib": "^2.0.1",
     "zone.js": "~0.10.3",
-    "firebase": "^7.0.0 || ^8.0.0"
+    "firebase": "^10.9.0"
   },
   "devDependencies": {
     "@angular-builders/jest": "^10.0.0",
